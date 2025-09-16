@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Special Question</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body id="body" class="bg-pink-100 flex items-center justify-center h-screen">
+
+  <!-- Page 1: Invitation -->
+  <div id="page-1" class="flex flex-col items-center justify-center p-4">
+    <div class="popup">
+      <h2 class="text-2xl font-bold text-gray-800 mb-2">You're Invited!</h2>
+      <p class="text-gray-600 mb-4">Please respond to the invitation below.</p>
+      <button id="enter-btn" class="btn-primary w-full">Click here to enter</button>
+    </div>
+  </div>
+
+  <!-- Page 2: Name Check -->
+  <div id="page-2" class="hidden flex-col items-center justify-center p-4">
+    <div class="popup-wide">
+      <h2 class="text-2xl font-bold text-gray-800 mb-2 flex justify-center">
+        Welcome Beautiful! <span class="ml-2 text-red-500">❤️</span>
+      </h2>
+      <p class="text-gray-600 mb-4">Please enter your name to continue...</p>
+
+      <div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+        <input type="text" id="name-input" class="input-box flex-1" placeholder="Enter your name here">
+        <button id="submit-name-btn" class="btn-primary sm:w-auto">Enter</button>
+      </div>
+
+      <p id="name-hint" class="hidden mt-3 text-sm"></p>
+    </div>
+  </div>
+
+  <!-- Page 3: Survey -->
+  <div id="page-3" class="hidden flex-col items-center justify-center p-4 w-full h-full gradient-bg">
+    <div class="popup-large">
+      <h2 class="text-3xl font-bold text-pink-600 mb-6 text-center">Girlfriend Survey</h2>
+      <div id="survey-content"></div>
+      <div id="final-question-link" class="hidden mt-8 text-center">
+        <p class="text-gray-700 text-lg mb-4 font-bold">Now for the final question!</p>
+        <a href="#" id="final-link" class="font-bold text-pink-600 hover:underline">Click here</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page 4: Proposal -->
+  <div id="page-4" class="hidden flex-col items-center justify-center p-4">
+    <div class="popup">
+      <h2 class="text-2xl font-bold text-gray-600 mb-2 flex justify-center">
+        The Big Question <span class="ml-2 text-red-500">❤️</span>
+      </h2>
+      <p class="text-gray-600 mb-6">Will you be my girlfriend?</p>
+      <div class="flex flex-col sm:flex-row gap-4 w-full">
+        <button id="yes-btn" class="btn-yes w-full">YES!</button>
+        <button id="no-btn" class="btn-no w-full">NO!</button>
+      </div>
+      <div id="no-joke-container" class="mt-4 hidden">
+        <h3 id="no-joke-text" class="text-xl font-bold text-gray-800 mb-2"></h3>
+        <p id="no-joke-subtext" class="text-gray-600 text-sm"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page 5: Celebration -->
+  <div id="page-5" class="hidden flex-col items-center justify-center p-4 w-full h-full gradient-bg">
+    <div class="popup-large">
+      <h1 class="text-3xl sm:text-5xl font-bold text-pink-600 mb-6 animate-pulse">She said YES! 🎉</h1>
+      <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+        I'm so happy you're going to be my girlfriend! Here are some of my favorite memories with you. I can’t wait to make so many more with you.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl mx-auto">
+        <div class="photo-card"><img src="good morning.jpg" alt="Our first morning together"></div>
+        <div class="photo-card"><img src="afternoon walk.jpg" alt="A nice afternoon walk"></div>
+        <div class="photo-card"><img src="2016 pic.jpg" alt="Back in 2016"></div>
+        <div class="photo-card"><img src="pool party.jpg" alt="A chill Saturday"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
